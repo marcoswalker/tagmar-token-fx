@@ -1,9 +1,9 @@
 {
     "name": "tagmar-token-fx",
-    "title": "Token Magix Fx -> Tagmar Integração",
+    "title": "Token Magix Fx -> Efeitos Mágicos Tagmar",
     "description": "",
     "author": "Marcos Walker",
-    "version": "0.0.5",
+    "version": "1.0.0",
     "url": "https://github.com/marcoswalker/tagmar-token-fx",
     "minimumCoreVersion": "0.7.9",
     "compatibleCoreVersion": "0.7.9",

@@ -28,11 +28,11 @@ Hooks.on('ready', function () {
 });
 
 Hooks.on("renderItemSheet", function (itemSheet, html, css) {
-    if (!(game.system.id === "tagmar_rpg" || game.system.id === "tagmar")) return ui.notifications.error("O módulo Token Magix Fx -> Tagmar Integração, só funciona com o sistema Tagmar.");
+    if (!(game.system.id === "tagmar_rpg" || game.system.id === "tagmar")) return ui.notifications.error("O módulo Token Magix Fx -> Efeitos Mágicos Tagmar, só funciona com o sistema Tagmar.");
     if (!game.modules.get('tokenmagic')) return;
     let tmfxTemplatePresets = TokenMagic.getPresets("tmfx-template");
     if (itemSheet.item.type === "Magia" && itemSheet.item.actor !== null) {
-        html.find('nav').append('<label class="mediaeval" style="border:black double 1px; text-align: center;"><a class="item" data-tab="tokenfx" title="Token Magic FX">Token Magic FX</a></label>');
+        html.find('nav').append('<label class="mediaeval" style="border:black double 1px; text-align: center;"><a class="item" data-tab="tokenfx" title="Token Magic FX">Efeitos Mágicos</a></label>');
         $.get("/modules/tagmar-token-fx/templates/magia.hbs", function (data) {
             html.find('.sheet-primary').append(data);
             for (let efect of tmfxTemplatePresets) {

@@ -1,4 +1,4 @@
-# Token Magix Fx -> Tagmar Integração
+# Token Magix Fx -> Efeitos Mágicos Tagmar
 ## Módulo para sistema Tagmar RPG no Foundry Vtt
 ### Esse módulo depende do [Token Magic FX](https://foundryvtt.com/packages/tokenmagic) e do sistema [Tagmar RPG](https://foundryvtt.com/packages/tagmar) para funcionar.
 Adiciona nos itens de Tecnicas de Combate e Magia, a possíbilidade de adicionar filtros FX que serão executados no token sempre que os mesmos são rolados. Para remover os filtros de efeitos basta usar a macro "00 - A - Delete filters on Selected" que vem no compêndio do módulo **Token Magic FX**, ou na ficha de Personagem foi adicionado um ícone ao lado das caixas de busca, nas abas de Combate e Magia.
