@@ -1,4 +1,4 @@
-Hooks.on('tagmar_itemRoll',async function (rollItem, user) {
+Hooks.on('tagmar_itemRoll', async function (rollItem, user) {
     if (game.user !== user) return;
     const magicFlags = rollItem.getFlag('tagmar-token-fx', 'magicFx');
     if (magicFlags) {
