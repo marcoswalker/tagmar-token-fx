@@ -7,8 +7,8 @@ Adiciona nos itens de Tecnicas de Combate e Magia, a possíbilidade de adicionar
 Copiar o link (https://raw.githubusercontent.com/marcoswalker/tagmar-token-fx/master/module.json) e colar na caixa manifest ao instalar módulo no Foundry Vtt. Lembrando que as dependências devem ser instaladas. Depois é só ativar os dois módulos dentro do mundo.
 
 #### Agradecimento (Thanks)
-Muito obrigado ao SecretFire por desenvolver esse módulo tão divertido.
-Many thanks to SecretFire for developing such a fun module.
+Muito obrigado ao **SecretFire** por desenvolver o **Token Magic Fx**.
+Many thanks to **SecretFire** for developing the **Token Magic Fx**.
 
 #### Criar novos Pressets
 Para criar novos pressets bastar preencher a variável "params" e trocar o nome do presset dentro da variável "presetDef" em "name". Depois basta executar apenas uma vez como um macro.
