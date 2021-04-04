@@ -10,7 +10,7 @@ Copiar o link (https://raw.githubusercontent.com/marcoswalker/tagmar-token-fx/ma
 Muito obrigado ao SecretFire por desenvolver esse módulo tão divertido.
 Many thanks to SecretFire for developing such a fun module.
 
-##### Criar novos Pressets
+#### Criar novos Pressets
 Para criar novos pressets bastar preencher a variável "params" e trocar o nome do presset dentro da variável "presetDef" em "name". Depois basta executar apenas uma vez como um macro.
 ~~~javascript
 let params = [];
@@ -25,13 +25,13 @@ TokenMagic.addPreset(presetDef, params);
 ~~~
 
 
-##### Deletar Pressets existentes
+#### Deletar Pressets existentes
 Para deletar um presset basta mudar o "Nome do Presset" e executar apenas uma vez como uma macro.
 ~~~javascript
 TokenMagic.deletePreset({name:"Nome do Presset",library:"tmfx-template"});
 ~~~
 
-##### Presset para Metamorphose
+#### Presset para Metamorphose
 Escolha entre os nove tipos e preencha o número referente em "transitionType", mude o endereço da imagem em "targetImagePath", escolha um ID (nome único, sem acento, sem espaço) em "polymorphFilterId" e mude "name" dentro de "presetDef". Basta executar apenas uma vez a macro que fica cadastrado nos Pressets.
 ~~~javascript
 // There is 9 types of metamorphose
