@@ -12,6 +12,17 @@ Hooks.on('tagmar_itemRoll',async function (rollItem, user) {
     }
 });
 
+Hooks.on("renderActorSheet", function (sheet, html, character) {
+    if (character.actor.type !== "Personagem") return;
+    $(html.find(".searchMagia")).css('width','90%');
+    $("<a class='removeFX' style='margin-left:20px;' title='Remover Efeitos Mágicos'><i class='fas fa-hand-sparkles'></i></a>").insertAfter(html.find('.searchMagia'));
+    $(html.find(".searchCombate")).css('width','90%');
+    $("<a class='removeFX' style='margin-left:20px;' title='Remover Efeitos Mágicos'><i class='fas fa-hand-sparkles'></i></a>").insertAfter(html.find('.searchCombate'));
+    html.find('.removeFX').click(function (event) {
+        TokenMagic.deleteFiltersOnSelected();
+    });
+});
+
 Hooks.on('ready', function () {
     if (!(game.system.id === "tagmar_rpg" || game.system.id === "tagmar")) return ui.notifications.error("Esse módulo só funciona com o sistema Tagmar, não insista.");
 });
