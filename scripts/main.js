@@ -7,7 +7,7 @@ Hooks.on('tagmar_itemRoll', async function (rollItem, user) {
                 name: magic,
                 library: "tmfx-template"
             };
-            await TokenMagic.addUpdateFiltersOnSelected(TokenMagic.getPreset(pstParams), false);
+            if (TokenMagic.getPreset(pstParams)) await TokenMagic.addUpdateFiltersOnSelected(TokenMagic.getPreset(pstParams), false);
         }
     }
 });
