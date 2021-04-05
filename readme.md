@@ -1,4 +1,4 @@
-# Token Magix Fx -> Efeitos Mágicos Tagmar
+# Token Magic FX -> Efeitos Mágicos Tagmar
 ![](page/token-magic.gif)
 ## Módulo para sistema Tagmar RPG no Foundry Vtt
 ### Esse módulo depende do [Token Magic FX](https://foundryvtt.com/packages/tokenmagic) e do sistema [Tagmar RPG](https://foundryvtt.com/packages/tagmar) para funcionar.
@@ -8,8 +8,8 @@ Adiciona nos itens de Tecnicas de Combate e Magia, a possíbilidade de adicionar
 Copiar o link (https://raw.githubusercontent.com/marcoswalker/tagmar-token-fx/master/module.json) e colar na caixa manifest ao instalar módulo no Foundry Vtt. Lembrando que as dependências devem ser instaladas. Depois é só ativar os dois módulos dentro do mundo.
 
 #### Agradecimento (Thanks)
-Muito obrigado ao **SecretFire** por desenvolver o **Token Magic Fx**.
-Many thanks to **SecretFire** for developing the **Token Magic Fx**.
+Muito obrigado ao **SecretFire** por desenvolver o **Token Magic FX**.
+Many thanks to **SecretFire** for developing the **Token Magic FX**.
 
 #### Criar novos Pressets
 Para criar novos pressets bastar preencher a variável "params" e trocar o nome do presset dentro da variável "presetDef" em "name". Depois basta executar apenas uma vez como um macro.
