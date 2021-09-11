@@ -32,13 +32,13 @@ Hooks.on("renderItemSheet", function (itemSheet, html, css) {
     if (!game.modules.get('tokenmagic')) return;
     let tmfxTemplatePresets = TokenMagic.getPresets("tmfx-template");
     if (itemSheet.item.type === "Magia" && itemSheet.item.actor !== null) {
-        html.find('nav').append('<label class="mediaeval" style="border:black double 1px; text-align: center;"><a class="item" data-tab="tokenfx" title="Token Magic FX">Efeitos Mágicos</a></label>');
+        //html.find('nav').append('<label class="mediaeval" style="border:black double 1px; text-align: center;"><a class="item" data-tab="tokenfx" title="Token Magic FX">Efeitos Mágicos</a></label>');
         $.get("/modules/tagmar-token-fx/templates/magia.hbs", function (data) {
-            html.find('.sheet-primary').append(data);
+            html.find('.sheet-primary').first().append(data);
             for (let efect of tmfxTemplatePresets) {
                 html.find('.magia_fx').append("<option class='mediaeval' value='"+ efect.name +"'>"+ efect.name + "</option>");
             }
-            html.find(".addMagicFx").click(function () {
+            html.find(".addMagicFx").click(function (event) {
                 const magicEfect = html.find(".magia_fx").val();
                 let ImagicFlags = itemSheet.item.getFlag('tagmar-token-fx', 'magicFx');
                 if (typeof ImagicFlags === "undefined" || typeof ImagicFlags === "string") {
@@ -47,6 +47,7 @@ Hooks.on("renderItemSheet", function (itemSheet, html, css) {
                     ImagicFlags.push(magicEfect);
                 }
                 itemSheet.item.setFlag('tagmar-token-fx', 'magicFx', ImagicFlags);
+                event.preventDefault();
             });
             const magicFlags = itemSheet.item.getFlag('tagmar-token-fx', 'magicFx');
             if (magicFlags) {
@@ -61,6 +62,7 @@ Hooks.on("renderItemSheet", function (itemSheet, html, css) {
                     magicF.splice(indexM, 1);
                     itemSheet.item.setFlag('tagmar-token-fx', 'magicFx', magicF);
                 }
+                event.preventDefault();
             });
         });
     } else if (itemSheet.item.type === "TecnicasCombate" && itemSheet.item.actor !== null) {
