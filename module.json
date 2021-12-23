@@ -9,10 +9,10 @@
 			"url": "https://github.com/marcoswalker"
 		}
 	],
-    "version": "1.0.3",
+    "version": "1.0.4",
     "url": "https://github.com/marcoswalker/tagmar-token-fx",
     "minimumCoreVersion": "0.7.9",
-    "compatibleCoreVersion": "0.8.9",
+    "compatibleCoreVersion": "9",
     "system": [
         "tagmar",
         "tagmar_rpg"
