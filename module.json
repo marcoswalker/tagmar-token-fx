@@ -1,4 +1,5 @@
 {
+  "id": "tagmar-token-fx",
   "title": "Tagmar Efeitos Mágicos",
   "description": "Adicionar efeitos mágicos em Magias e Tecnicas de Combate, usando Token Magic FX.",
   "authors": [
@@ -8,14 +9,13 @@
       "flags": {}
     }
   ],
-  "version": "1.0.5",
+  "version": "1.0.6",
   "url": "https://github.com/marcoswalker/tagmar-token-fx",
   "esmodules": [
     "scripts/main.js"
   ],
   "manifest": "https://raw.githubusercontent.com/marcoswalker/tagmar-token-fx/master/module.json",
   "download": "https://codeload.github.com/marcoswalker/tagmar-token-fx/zip/master",
-  "id": "tagmar-token-fx",
   "relationships": {
     "requires": [
       {
@@ -40,6 +40,6 @@
   },
   "compatibility": {
     "minimum": "0.7.9",
-    "verified": "10"
+    "verified": "11"
   }
 }
