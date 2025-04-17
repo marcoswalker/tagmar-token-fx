@@ -27,14 +27,14 @@ Hooks.on('ready', function () {
     if (!(game.system.id === "tagmar_rpg" || game.system.id === "tagmar")) return ui.notifications.error("Esse módulo só funciona com o sistema Tagmar, não insista.");
 });
 
-Hooks.on("renderItemSheet", function (itemSheet, html, css) {
+Hooks.on("renderItemSheet", function (itemSheet, html, data) {
     if (!(game.system.id === "tagmar_rpg" || game.system.id === "tagmar")) return ui.notifications.error("O módulo Token Magix Fx -> Efeitos Mágicos Tagmar, só funciona com o sistema Tagmar.");
     if (!game.modules.get('tokenmagic')) return;
     let tmfxTemplatePresets = TokenMagic.getPresets("tmfx-template");
     if (itemSheet.item.type === "Magia" && itemSheet.item.actor !== null) {
-        //html.find('nav').append('<label class="mediaeval" style="border:black double 1px; text-align: center;"><a class="item" data-tab="tokenfx" title="Token Magic FX">Efeitos Mágicos</a></label>');
         $.get("/modules/tagmar-token-fx/templates/magia.hbs", function (data) {
-            html.find('.sheet-primary').first().append(data);
+            html.find('.abas').first().removeClass('esconde');
+            html.find('.sheet-primary .container_dados').first().append(data);
             for (let efect of tmfxTemplatePresets) {
                 html.find('.magia_fx').append("<option class='mediaeval' value='"+ efect.name +"'>"+ efect.name + "</option>");
             }
@@ -64,12 +64,12 @@ Hooks.on("renderItemSheet", function (itemSheet, html, css) {
                 }
                 event.preventDefault();
             });
+            itemSheet.activateTab('basico');
         });
     } else if (itemSheet.item.type === "Tecnica_Combate" && itemSheet.item.actor !== null) {
         $.get('/modules/tagmar-token-fx/templates/tecnica.hbs', function (data) {
-            
-            html.find('.sheet-primary').append(data);
-            //html.find('.sheet-header .container').first().append(data);
+            html.find('.abas').first().removeClass('esconde');
+            html.find('.sheet-primary .container_dados').first().append(data);
             for (let efect of tmfxTemplatePresets) {
                 html.find('.magia_fx').append("<option class='mediaeval' value='"+ efect.name +"'>"+ efect.name + "</option>");
             }
@@ -97,6 +97,7 @@ Hooks.on("renderItemSheet", function (itemSheet, html, css) {
                     itemSheet.item.setFlag('tagmar-token-fx', 'magicFx', magicF);
                 }
             });
+            itemSheet.activateTab('basico');
         });
     }
 });

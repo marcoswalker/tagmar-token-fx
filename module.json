@@ -9,7 +9,7 @@
       "flags": {}
     }
   ],
-  "version": "1.0.7",
+  "version": "1.0.8",
   "url": "https://github.com/marcoswalker/tagmar-token-fx",
   "esmodules": [
     "scripts/main.js"
@@ -39,7 +39,7 @@
     ]
   },
   "compatibility": {
-    "minimum": "0.7.9",
+    "minimum": "12",
     "verified": "12.0"
   }
 }
